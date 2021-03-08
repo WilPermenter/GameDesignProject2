@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Finished_Robot_Game_3.wav-4d62099b931191d99b8182d7c4a7dd3e.sample"
+
+[deps]
+
+source_file="res://assets/Music/Finished_Robot_Game_3.wav"
+dest_files=[ "res://.import/Finished_Robot_Game_3.wav-4d62099b931191d99b8182d7c4a7dd3e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

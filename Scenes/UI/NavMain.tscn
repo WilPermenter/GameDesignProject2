@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Fonts/DotFont150.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/nav.png" type="Texture" id=2]
+[ext_resource path="res://assets/Backgrounds/FridgeStation.png" type="Texture" id=3]
+[ext_resource path="res://assets/Backgrounds/OvenStation.png" type="Texture" id=4]
+[ext_resource path="res://assets/Backgrounds/WorkStation.png" type="Texture" id=5]
+[ext_resource path="res://assets/Backgrounds/WindowStation.png" type="Texture" id=6]
+[ext_resource path="res://scrips/NavMain.gd" type="Script" id=7]
+
+[node name="NavMain" type="Control"]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nav" type="Sprite" parent="."]
+position = Vector2( 165.243, 379.137 )
+scale = Vector2( 0.330845, 0.297289 )
+z_index = 1
+texture = ExtResource( 2 )
+
+[node name="GridContainer" type="GridContainer" parent="nav"]
+anchor_left = 0.5
+anchor_top = 0.053
+anchor_right = 0.5
+anchor_bottom = 0.053
+margin_left = -1035.5
+margin_top = -1171.32
+margin_right = -11.5
+margin_bottom = 103.682
+custom_constants/vseparation = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="Button" parent="nav/GridContainer"]
+margin_right = 1024.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Window"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowStation" type="Sprite" parent="nav/GridContainer/Window"]
+visible = false
+position = Vector2( 1187.98, 694.842 )
+scale = Vector2( 0.325622, 0.255148 )
+texture = ExtResource( 6 )
+
+[node name="Oven" type="Button" parent="nav/GridContainer"]
+margin_top = 304.0
+margin_right = 1024.0
+margin_bottom = 528.0
+custom_fonts/font = ExtResource( 1 )
+text = "Oven"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Oven_Station" type="Sprite" parent="nav/GridContainer/Oven"]
+visible = false
+position = Vector2( -76.5552, 792.456 )
+scale = Vector2( 0.407136, 0.328566 )
+texture = ExtResource( 4 )
+
+[node name="Fridge" type="Button" parent="nav/GridContainer"]
+margin_top = 608.0
+margin_right = 1024.0
+margin_bottom = 832.0
+custom_fonts/font = ExtResource( 1 )
+text = "Fridge"
+
+[node name="FridgeStation" type="Sprite" parent="nav/GridContainer/Fridge"]
+visible = false
+position = Vector2( -64.8072, 389.153 )
+scale = Vector2( 0.404579, 0.322104 )
+texture = ExtResource( 3 )
+
+[node name="Work" type="Button" parent="nav/GridContainer"]
+margin_top = 912.0
+margin_right = 1024.0
+margin_bottom = 1136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Work"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Workstation" type="Sprite" parent="nav/GridContainer/Work"]
+visible = false
+position = Vector2( -66.4049, 1152.9 )
+scale = Vector2( 0.38605, 0.312043 )
+texture = ExtResource( 5 )
+[connection signal="pressed" from="nav/GridContainer/Window" to="." method="_on_Window_pressed"]
+[connection signal="pressed" from="nav/GridContainer/Oven" to="." method="_on_Oven_pressed"]
+[connection signal="pressed" from="nav/GridContainer/Fridge" to="." method="_on_Fridge_pressed"]
+[connection signal="pressed" from="nav/GridContainer/Work" to="." method="_on_Work_pressed"]
