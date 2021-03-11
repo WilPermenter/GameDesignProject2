@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Backgrounds/FridgeStation.png" type="Texture" id=1]
 [ext_resource path="res://assets/Icon_Items/rect833.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/UI/ItemSkeleton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/UI/drop_zone.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/UI/ItemSkeleton2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/componets/FoodItems/Iron.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/componets/drop_zone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/componets/FoodItems/Copper.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/componets/FoodItems/Glass.tscn" type="PackedScene" id=6]
 
 [node name="Fridge" type="Node2D"]
 position = Vector2( 338.984, -2.24493 )
@@ -21,16 +22,17 @@ scale = Vector2( 1.739, 0.867 )
 z_index = -2
 texture = ExtResource( 2 )
 
-[node name="TestNode1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 508.208, 275.663 )
-z_index = 2
-
-[node name="TestNode2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1171.85, 271.636 )
-z_index = 2
-
 [node name="Fridge_1_1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 505.107, 273.881 )
+
+[node name="Fridge_1_2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 500.618, 597.15 )
+
+[node name="Fridge_2_1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 832.86, 342.302 )
+
+[node name="Fridge_2_2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 822.769, 670.054 )
 
 [node name="Fridge_3_1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1167.36, 271.636 )
@@ -38,15 +40,20 @@ position = Vector2( 1167.36, 271.636 )
 [node name="Fridge_3_2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1165.12, 615.11 )
 
-[node name="Fridge_1_2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 500.618, 597.15 )
+[node name="Iron0" parent="." instance=ExtResource( 3 )]
+position = Vector2( 506.219, 272.45 )
 
-[node name="Fridge_2_2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 826.133, 619.6 )
+[node name="Iron1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 502.855, 602.081 )
 
-[node name="Fridge_2_1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 826.133, 298.575 )
+[node name="Glass0" parent="." instance=ExtResource( 6 )]
+position = Vector2( 837.532, 341.404 )
 
-[node name="Node2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 495.34, 598.684 )
-z_index = 2
+[node name="Glass1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 825.76, 665.99 )
+
+[node name="Copper0" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1165.48, 615.536 )
+
+[node name="Copper1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1165.48, 272.45 )

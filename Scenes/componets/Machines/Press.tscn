@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/componets/drop_zone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/press.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/componets/Machines/Press.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 174.0
+
+[node name="Press" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Press_Sprite" type="Sprite" parent="."]
+position = Vector2( 468.282, -220.125 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Press_Sprite"]
+position = Vector2( 449.718, 280.125 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Press_Sprite/Area2D"]
+position = Vector2( -866.826, 20.1587 )
+shape = SubResource( 1 )
+
+[node name="drop_zone" parent="Press_Sprite" instance=ExtResource( 1 )]
+position = Vector2( -410.95, 291.465 )
+[connection signal="area_entered" from="Press_Sprite/Area2D" to="." method="_on_Area2D_area_entered"]

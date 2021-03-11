@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/instructions.png" type="Texture" id=1]
+[ext_resource path="res://assets/Fonts/TextBubbleFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scrips/ToMain.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="instructions" type="Sprite" parent="."]
+position = Vector2( 959.939, 539.41 )
+scale = Vector2( 0.296112, 0.392956 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 13.3484
+margin_top = -10.6787
+margin_right = 1928.35
+margin_bottom = 1145.32
+custom_fonts/font = ExtResource( 2 )
+text = "Demo: For this demo you are tasked with day one of A Recipe for Disaster. 
+
+You will find your kitchen has been set up for you to succeed so if you fail your robot overlords will not be happy. For day one, you just need to make a simple hamburger. To do this grab the ingredients from the fridge and use the machines at the workbench to turn them into your final ingredients. Then Put them all together and pop them in the furnace to melt them together. You have 2 minutes to cook the burger.  Pro Tip, Medium takes 10-20 seconds. Good Luck                             Click To Continue....."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

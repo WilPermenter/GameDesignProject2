@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Fonts/Font-130.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Backgrounds/good_job.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="good_job" type="Sprite" parent="."]
+position = Vector2( 970.147, 526.588 )
+scale = Vector2( 0.822237, 0.752233 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 37.7548
+margin_top = 90.612
+margin_right = 1662.75
+margin_bottom = 1047.61
+custom_fonts/font = ExtResource( 1 )
+text = " You Did....
+ Fabulous!
+
+	 
+Thanks for playing"
+__meta__ = {
+"_edit_use_anchors_": false
+}

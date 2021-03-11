@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI/NavMain.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/UI/Window.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/UI/Oven.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Music/Finished_Robot_Game_3.wav" type="AudioStream" id=8]
+[ext_resource path="res://Scenes/UI/Ticket.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node2D"]
 
@@ -31,7 +32,10 @@ position = Vector2( 3494.73, -0.332916 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -80.0
+volume_db = -30.556
 autoplay = true
 mix_target = 1
+
+[node name="Ticket-1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1142.98, 348.968 )
 [connection signal="map_location" from="NavMain" to="Map" method="_on_NavMain_map_location"]

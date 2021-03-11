@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Icon_Items/ticket.png" type="Texture" id=1]
+[ext_resource path="res://scrips/Ticket.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 500, 500 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Ticket" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="ticket" type="Sprite" parent="."]
 position = Vector2( -1.27502, 0.144775 )
@@ -16,3 +18,5 @@ position = Vector2( 1.27502, -0.144775 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ticket/Area2D"]
 shape = SubResource( 1 )
+[connection signal="mouse_entered" from="ticket/Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="ticket/Area2D" to="." method="_on_Area2D_mouse_exited"]

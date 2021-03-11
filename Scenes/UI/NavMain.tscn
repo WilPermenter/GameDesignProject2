@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Fonts/DotFont150.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/nav.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/Backgrounds/WorkStation.png" type="Texture" id=5]
 [ext_resource path="res://assets/Backgrounds/WindowStation.png" type="Texture" id=6]
 [ext_resource path="res://scrips/NavMain.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/UI/Clock.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Music/Latch_sound.wav" type="AudioStream" id=9]
 
 [node name="NavMain" type="Control"]
 script = ExtResource( 7 )
@@ -19,6 +21,12 @@ position = Vector2( 165.243, 379.137 )
 scale = Vector2( 0.330845, 0.297289 )
 z_index = 1
 texture = ExtResource( 2 )
+
+[node name="click" type="AudioStreamPlayer2D" parent="nav"]
+position = Vector2( -499.457, -1275.31 )
+scale = Vector2( 3.02256, 3.36373 )
+stream = ExtResource( 9 )
+volume_db = -18.354
 
 [node name="GridContainer" type="GridContainer" parent="nav"]
 anchor_left = 0.5
@@ -33,6 +41,11 @@ custom_constants/vseparation = 80
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Clock" parent="nav/GridContainer" instance=ExtResource( 8 )]
+position = Vector2( 516.995, 1392.32 )
+scale = Vector2( 3.02256, 3.36373 )
+z_index = 4
 
 [node name="Window" type="Button" parent="nav/GridContainer"]
 margin_right = 1024.0
@@ -55,7 +68,7 @@ margin_top = 304.0
 margin_right = 1024.0
 margin_bottom = 528.0
 custom_fonts/font = ExtResource( 1 )
-text = "Oven"
+text = "Furnace"
 __meta__ = {
 "_edit_use_anchors_": false
 }
